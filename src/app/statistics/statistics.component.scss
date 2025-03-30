@@ -1,0 +1,91 @@
+// components/statistics/statistics.component.scss
+@use '../../assets/styles/variables' as *;
+
+.statistics-section {
+  background: linear-gradient(135deg, $primary-green, $primary-blue);
+  padding: $spacing-xl 0;
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background-image: url('https://d1gcna0o0ldu5v.cloudfront.net/fit-in/320x410/assets/images/astrologer_baba.webp');
+    opacity: 0.1;
+    z-index: 1;
+  }
+  
+  .statistics-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $spacing-xxll;
+    position: relative;
+    z-index: 2;
+    
+    .statistic-card {
+      display: flex;
+      align-items: center;
+      background-color: rgba($neutral-white, 0.05);
+      backdrop-filter: blur(10px);
+      padding: $spacing-lg $spacing-xl;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-md;
+      border-left: 3px solid $primary-gold;
+      
+      .stat-icon {
+        color: $primary-gold;
+        font-size: 2.2rem;
+        margin-right: $spacing-lg;
+      }
+      
+      .stat-info {
+        .stat-value {
+          font-family: $font-primary;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: $neutral-white;
+          margin-bottom: $spacing-xs;
+        }
+        
+        .stat-label {
+          font-family: $font-secondary;
+          font-size: 1rem;
+          color: $neutral-light;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .statistics-section {
+    .statistics-content {
+      flex-wrap: wrap;
+      gap: $spacing-lg;
+      padding: 0 $spacing-lg;
+      
+      .statistic-card {
+        flex: 0 0 calc(50% - #{$spacing-lg});
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .statistics-section {
+    .statistics-content {
+      flex-direction: column;
+      gap: $spacing-lg;
+      
+      .statistic-card {
+        width: 100%;
+      }
+    }
+  }
+}

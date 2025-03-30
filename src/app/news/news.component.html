@@ -1,0 +1,33 @@
+<section class="news-section">
+
+  <div class="news--section-content">
+    <div class="section-header">
+      <h2>Latest from News</h2>
+      <p>Top Astrologers. 24 * 7 customer support. Happy to help</p>
+    </div>
+    
+    <div class="news-grid">
+      <div class="news-card" *ngFor="let post of newsPosts">
+        <div class="news-image">
+          <img [src]="post.image" [alt]="post.title">
+          <div class="views-count">
+            <i class="fa fa-eye"></i> {{ post.views }}
+          </div>
+        </div>
+        <div class="news-content">
+          <h3>{{ post.title }}</h3>
+          <div class="news-meta">
+            <span class="author">{{ post.author }}</span>
+            <span class="date">{{ post.date }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slider-controls">
+      <button class="control prev"><i class="fa fa-chevron-left"></i></button>
+      <button class="control next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </div>
+  
+</section>

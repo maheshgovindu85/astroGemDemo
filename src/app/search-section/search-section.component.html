@@ -1,0 +1,21 @@
+<section class="search-section">
+    <div class="search-container">
+      <h2>Find Your Astrologer</h2>
+      <div class="search-form">
+        <div class="search-input">
+          <input 
+            type="text" 
+            placeholder="Search by name or expertise..." 
+            [(ngModel)]="searchQuery"
+          >
+        </div>
+        <div class="search-filter">
+          <select [(ngModel)]="selectedCategory">
+            <option value="">All Categories</option>
+            <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" (click)="onSearch()">Search</button>
+      </div>
+    </div>
+  </section>

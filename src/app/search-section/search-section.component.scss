@@ -1,0 +1,71 @@
+@import '../../assets/styles/_variables.scss';
+
+.search-section {
+    padding: 3rem 5%;
+    background-color: $neutral-light;
+  }
+  
+  .search-container {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: $primary-dark;
+      font-size: 1.6rem;
+    }
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 1rem;
+    
+    .search-input {
+      flex: 3;
+      
+      input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        
+        &:focus {
+          outline: none;
+          border-color: $primary-light;
+          box-shadow: 0 0 0 2px rgba(74, 105, 189, 0.2);
+        }
+      }
+    }
+    
+    .search-filter {
+      flex: 2;
+      
+      select {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        background-color: white;
+        
+        &:focus {
+          outline: none;
+          border-color: $primary-light;
+          box-shadow: 0 0 0 2px rgba(74, 105, 189, 0.2);
+        }
+      }
+    }
+    
+    .btn {
+      flex: 1;
+      padding: 0.8rem 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-form {
+      flex-direction: column;
+    }
+  }

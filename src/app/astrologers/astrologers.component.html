@@ -1,0 +1,23 @@
+<section class="astrologers-section">
+  <div class="astrologers-content">
+    <h2 class="section-title">Our Astrologers</h2>
+    <p class="section-subtitle">13000+ Best Astrologers from India for Online Consultation</p>
+    
+    <div class="astrologers-grid">
+      <div class="astrologer-card" *ngFor="let astrologer of astrologers">
+        <div class="astrologer-image">
+          <img [src]="astrologer.image" [alt]="astrologer.name">
+        </div>
+        <h3 class="astrologer-name">{{ astrologer.name }}</h3>
+        <p class="astrologer-specialty">{{ astrologer.specialty }}</p>
+        <button class="btn btn-consult">Consult Now</button>
+      </div>
+    </div>
+    
+    <div class="slider-controls">
+      <button class="control prev"><i class="fa fa-chevron-left"></i></button>
+      <button class="control next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </div>
+   
+  </section>

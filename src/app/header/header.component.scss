@@ -1,0 +1,197 @@
+// components/header/header.component.scss
+@use '../../assets/styles/variables' as *;
+
+.header {
+  background-color: $primary-blue;
+  box-shadow: $shadow-md;
+  
+  .header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md $spacing-xl;
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      color: $neutral-white;
+      font-family: $font-primary;
+      font-size: 1.8rem;
+      font-weight: 700;
+      
+      .logo-icon {
+        margin-right: $spacing-sm;
+        font-size: 2rem;
+      }
+      span{
+      color: $primary-gold;
+
+      }
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: $spacing-lg;
+      
+      .nav-link {
+        color: $primary-cream;
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: $transition-normal;
+        
+        &:hover {
+          color: $primary-gold;
+        }
+      }
+      
+      .dropdown {
+        position: relative;
+        
+        .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          gap: $spacing-xs;
+          
+          i {
+            font-size: 0.8rem;
+          }
+        }
+      }
+      
+      .login-btn {
+        background-color: $primary-gold;
+        color: $primary-blue;
+        border: none;
+        border-radius: $border-radius-md;
+        padding: $spacing-sm $spacing-lg;
+        font-family: $font-secondary;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: $spacing-xs;
+        cursor: pointer;
+        transition: $transition-normal;
+        
+        &:hover {
+          background-color: $secondary-gold-light;
+        }
+      }
+    }
+  }
+  
+  .sub-nav {
+    background-color: $secondary-dark;
+    padding: $spacing-sm 0;
+    
+    .sub-nav-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: $spacing-lg;
+      padding: 0 $spacing-xl;
+      
+      .sub-link {
+        color: $neutral-medium;
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-size: 0.9rem;
+        transition: $transition-normal;
+        position: relative;
+        
+        &:hover {
+          color: $neutral-white;
+        }
+      }
+      
+      .new-tag {
+        position: relative;
+        
+        .new {
+          position: absolute;
+          top: -$spacing-md;
+          right: -$spacing-md;
+          background-color: $primary-green;
+          color: $neutral-white;
+          font-size: 0.6rem;
+          padding: 2px 6px;
+          border-radius: $border-radius-sm;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .header {
+    .header-content, .sub-nav-content {
+      padding: $spacing-md;
+    }
+    
+    .nav-links {
+      gap: $spacing-md;
+    }
+    
+    .sub-nav-content {
+      gap: $spacing-md;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .header {
+    .header-content {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+    
+    .nav-links {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: $spacing-sm $spacing-md;
+    }
+  }
+}
+
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    animation: slide-down 0.7s;
+    -moz-animation: slide-down 0.7s;
+    -webkit-animation: slide-down 0.7s;
+    -o-animation: slide-down 0.7s;
+    overflow: visible;
+  
+  }
+
+  
+  
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+    }
+  
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        -moz-transform: translateY(0);
+    }
+  }

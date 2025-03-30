@@ -1,0 +1,139 @@
+
+@use '../../assets/styles/variables' as *;
+.footer {
+    background-color: $primary-blue;
+    color: $neutral-white;
+    padding: $spacing-xxl 0 $spacing-lg;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xl;
+  }
+  
+  .footer-title {
+    color: $primary-gold;
+    font-size: 1.8rem;
+    margin: 0 0 $spacing-md;
+  }
+  
+  .footer-description {
+    line-height: 1.6;
+    margin-bottom: $spacing-lg;
+    opacity: 0.8;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: $spacing-md;
+  }
+  
+  .social-link {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: $border-radius-round;
+    color: $neutral-white;
+    text-decoration: none;
+    transition: $transition-normal;
+  }
+  
+  .social-link:hover {
+    background-color: $primary-gold;
+    color: $primary-blue;
+  }
+  
+  .footer-heading {
+    color: $primary-gold;
+    font-size: 1.2rem;
+    margin: 0 0 $spacing-md;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: $spacing-sm;
+  }
+  
+  .footer-links a {
+    color: $neutral-white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: $transition-normal;
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+    color: $primary-gold;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-md;
+    opacity: 0.8;
+  }
+  
+  .contact-info i {
+    margin-top: 4px;
+  }
+  
+  .download-apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+  }
+  
+  .app-link {
+    display: block;
+    transition: $transition-normal;
+  }
+  
+  .app-link:hover {
+    opacity: 0.8;
+  }
+  
+  .footer-bottom {
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom .fa-heart {
+    color: #ff4a6b;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }

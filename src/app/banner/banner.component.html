@@ -1,0 +1,30 @@
+<div class="banner">
+    <div class="stars-background"></div>
+    <div class="banner-content">
+      <div class="astrologer-image">
+        <div class="image-container">
+          <img src="https://d1gcna0o0ldu5v.cloudfront.net/fit-in/320x410/assets/images/astrologer_baba.webp" alt="Astrologer" />
+        </div>
+      </div>
+      <div class="banner-text">
+        <h2 class="celebs-text">
+          <span class="count">200+ Celebs</span> recommend
+          <span class="astrogem">AstroGem</span>
+        </h2>
+        <h1 class="banner-title">Cosmic Guidance Awaits You</h1>
+        <p class="banner-subtitle">Get personalized astrological insights from verified experts</p>
+        <button class="chat-now-btn">
+          <span>Chat with Astrologer</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <div class="service-section">
+            <div class="service-card" *ngFor="let service of services">
+              <div class="icon" [innerHTML]="service.icon"></div>
+              <p class="service-title">{{ service.title }}</p>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>

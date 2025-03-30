@@ -1,0 +1,62 @@
+@use '../../assets/styles/variables' as *;
+.why-astrology {
+    padding:$spacing-xxl 0;
+    background-color: $neutral-light;
+  }
+  .why-astrology-content {
+    // max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    color:$primary-blue;
+    font-size: 2rem;
+    margin-bottom:$spacing-sm;
+  }
+  
+  .tagline {
+    text-align: center;
+    color:$secondary-dark;
+    font-size: 1.2rem;
+    margin-bottom:$spacing-xl;
+    font-style: italic;
+  }
+  
+  .content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .content p {
+    margin-bottom:$spacing-md;
+    line-height: 1.6;
+    color:$neutral-dark;
+  }
+  
+  .content h3 {
+    color:$primary-blue;
+    margin:$spacing-lg 0$spacing-md;
+    font-size: 1.4rem;
+  }
+  
+  .cta-section {
+    margin-top:$spacing-xl;
+    text-align: center;
+  }
+  
+  .btn-consult {
+    background-color:$primary-blue;
+    color:$neutral-white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius:$border-radius-md;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition:$transition-normal;
+  }
+  
+  .btn-consult:hover {
+    background-color:$secondary-dark;
+  }

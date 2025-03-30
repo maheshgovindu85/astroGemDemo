@@ -1,0 +1,176 @@
+// components/service-cards/service-cards.component.scss
+@use '../../assets/styles/variables' as *;
+
+.services-section {
+  background-color: $primary-cream;
+  padding: $spacing-xxl 0;
+  
+  .services-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    .services-title {
+      text-align: center;
+      font-family: $font-primary;
+      font-size: 2rem;
+      font-weight: 700;
+      color: $primary-blue;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .services-subtitle {
+      text-align: center;
+      font-family: $font-secondary;
+      font-size: 1.1rem;
+      color: $neutral-dark;
+      margin-bottom: $spacing-xl;
+    }
+    
+    .services-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      
+      .nav-arrow {
+        background-color: $primary-blue ;
+        border: 1px solid $neutral-medium;
+        width: 40px;
+        height: 36px;
+        border-radius: $border-radius-round;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: $transition-normal;
+        z-index: 10;
+        color: $neutral-white;
+        
+        &:hover {
+          background-color: $neutral-white;
+          border-color: $primary-blue;
+          color:   $primary-blue;
+        }
+      }
+      
+      .service-cards {
+        display: flex;
+        gap: $spacing-lg;
+        overflow-x: hidden;
+        padding: $spacing-md 0;
+        margin: 0 $spacing-md;
+        width: 100%;
+        
+        .service-card {
+          flex: 0 0 calc(25% - #{$spacing-lg});
+          background-color: $neutral-white;
+          border-radius: $border-radius-lg;
+          padding: $spacing-xl;
+          box-shadow: $shadow-md;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          transition: $transition-normal;
+          border-bottom: 4px solid transparent;
+          box-shadow: $shadow-lg;
+            border-bottom-color: $primary-gold;
+          
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: $shadow-lg;
+            border-bottom-color: $primary-gold;
+          }
+          
+          .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, $primary-blue, $primary-green);
+            border-radius: $border-radius-round;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: $spacing-lg;
+            color: $primary-gold;
+            font-size: 1.8rem;
+          }
+          
+          .card-title {
+            font-family: $font-primary;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: $spacing-md;
+            color: $primary-blue;
+          }
+          
+          .card-description {
+            font-family: $font-secondary;
+            font-size: 0.95rem;
+            color: $neutral-dark;
+            line-height: 1.6;
+            margin-bottom: $spacing-lg;
+            flex-grow: 1;
+          }
+          
+          .card-link {
+            color: $primary-green;
+            text-decoration: none;
+            font-family: $font-secondary;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: $transition-normal;
+            display: flex;
+            align-items: center;
+            gap: $spacing-xs;
+            
+            &:hover {
+              color: $secondary-green-light;
+            }
+            
+            &:after {
+              content: '→';
+              transition: $transition-normal;
+            }
+            
+            &:hover:after {
+              margin-left: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .services-section {
+    .services-content {
+      padding: 0 $spacing-lg;
+      
+      .services-container {
+        .service-cards {
+          .service-card {
+            flex: 0 0 calc(50% - #{$spacing-lg});
+            margin-bottom: $spacing-lg;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .services-section {
+    .services-content {
+      .services-container {
+        .service-cards {
+          flex-direction: column;
+          
+          .service-card {
+            flex: 0 0 auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

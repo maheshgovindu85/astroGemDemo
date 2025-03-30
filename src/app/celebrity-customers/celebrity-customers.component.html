@@ -1,0 +1,23 @@
+<section class="celebrity-section">
+  <div class="celebrity-content">
+    <h2 class="section-title">Our Celebrity Customers</h2>
+
+    <div class="celebrity-grid">
+      <div class="celebrity-card" *ngFor="let celebrity of celebrities">
+        <div class="celebrity-image">
+          <img [src]="celebrity.image" [alt]="celebrity.name">
+          <div class="play-button">
+            <i class="fa fa-play"></i>
+          </div>
+          <div class="celebrity-name">{{ celebrity.name }}</div>
+        </div>
+        <p class="celebrity-title">{{ celebrity.title }}</p>
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="control prev"><i class="fa fa-chevron-left"></i></button>
+      <button class="control next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>

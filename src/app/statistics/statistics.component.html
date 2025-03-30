@@ -1,0 +1,13 @@
+<div class="statistics-section">
+    <div class="statistics-content">
+      <div class="statistic-card" *ngFor="let stat of statistics">
+        <div class="stat-icon">
+          <i [class]="stat.icon"></i>
+        </div>
+        <div class="stat-info">
+          <div class="stat-value">{{stat.value}}</div>
+          <div class="stat-label">{{stat.label}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
