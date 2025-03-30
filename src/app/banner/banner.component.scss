@@ -21,9 +21,18 @@
       }
   
       .icon {
-        width: 60px;
-        height: 60px;
         margin: 0 auto 10px;
+
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, $primary-blue, $primary-green);
+        border-radius: $border-radius-round;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: $spacing-lg;
+        color: $primary-gold;
+        font-size: 1.8rem;
         
         img {
           width: 100%;

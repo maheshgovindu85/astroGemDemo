@@ -20,7 +20,9 @@
 
         <div class="service-section">
             <div class="service-card" *ngFor="let service of services">
-              <div class="icon" [innerHTML]="service.icon"></div>
+              <div class="icon">
+                <i [class]="service.icon"></i>
+              </div>
               <p class="service-title">{{ service.title }}</p>
             </div>
           </div>

@@ -10,9 +10,9 @@
       <div class="news-card" *ngFor="let post of newsPosts">
         <div class="news-image">
           <img [src]="post.image" [alt]="post.title">
-          <div class="views-count">
+          <!-- <div class="views-count">
             <i class="fa fa-eye"></i> {{ post.views }}
-          </div>
+          </div> -->
         </div>
         <div class="news-content">
           <h3>{{ post.title }}</h3>

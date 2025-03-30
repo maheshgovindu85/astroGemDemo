@@ -1,4 +1,4 @@
-@import '../../assets/styles/_variables.scss';
+@use '../../assets/styles/variables.scss' as *;
 
 .search-section {
     padding: 3rem 5%;
@@ -12,7 +12,7 @@
     h2 {
       text-align: center;
       margin-bottom: 2rem;
-      color: $primary-dark;
+      color: $primary-blue;
       font-size: 1.6rem;
     }
   }
@@ -33,7 +33,7 @@
         
         &:focus {
           outline: none;
-          border-color: $primary-light;
+          border-color: $primary-cream;
           box-shadow: 0 0 0 2px rgba(74, 105, 189, 0.2);
         }
       }
@@ -52,7 +52,7 @@
         
         &:focus {
           outline: none;
-          border-color: $primary-light;
+          border-color: $primary-cream;
           box-shadow: 0 0 0 2px rgba(74, 105, 189, 0.2);
         }
       }
@@ -61,6 +61,10 @@
     .btn {
       flex: 1;
       padding: 0.8rem 1rem;
+      background-color: $primary-gold;
+      color: $secondary-dark;
+      border: none;
+
     }
   }
   
