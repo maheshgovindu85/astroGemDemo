@@ -19,7 +19,7 @@ export class BlogSectionComponent {
   blogPosts: BlogPost[] = [
     {
       id: 1,
-      title: 'Find Your Guardian Angel According to Your Zodiac Sign',
+      title: 'Find Your Guardian Angel According to Your Zodiac',
       image: 'https://www.claudeusercontent.com/api/placeholder/400/250',
       author: 'Astrologer Aakanksha',
       date: 'March 25, 2025',

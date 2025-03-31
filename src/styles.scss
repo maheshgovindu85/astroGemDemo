@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+@import './assets/styles/variables';
+
 * {
     margin: 0;
     padding: 0;
@@ -12,3 +14,27 @@
     color: var(--text-dark);
     line-height: 1.6;
   }
+
+  /// common arrow click css Start
+  .nav-arrow {
+    background-color: $primary-blue ;
+    border: 1px solid $neutral-medium;
+    width: 40px;
+    height: 36px;
+    border-radius: $border-radius-round;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $transition-normal;
+    z-index: 10;
+    color: $neutral-white;
+    
+    &:hover {
+      background-color: $neutral-white;
+      border-color: $primary-blue;
+      color:   $primary-blue;
+    }
+  }
+
+  /// common arrow click css END

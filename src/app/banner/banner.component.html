@@ -1,12 +1,14 @@
 <div class="banner">
-    <div class="stars-background"></div>
-    <div class="banner-content">
-      <div class="astrologer-image">
+  <div class="stars-background"></div>
+  <div class="banner-content container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 col-md-4 astrologer-image">
         <div class="image-container">
-          <img src="https://d1gcna0o0ldu5v.cloudfront.net/fit-in/320x410/assets/images/astrologer_baba.webp" alt="Astrologer" />
+          <img src="https://d1gcna0o0ldu5v.cloudfront.net/fit-in/320x410/assets/images/astrologer_baba.webp"
+            alt="Astrologer" class="img-fluid" />
         </div>
       </div>
-      <div class="banner-text">
+      <div class="banner-text col-lg-8 col-md-8">
         <h2 class="celebs-text">
           <span class="count">200+ Celebs</span> recommend
           <span class="astrogem">AstroGem</span>
@@ -18,15 +20,24 @@
           <i class="fa-solid fa-arrow-right"></i>
         </button>
 
-        <div class="service-section">
-            <div class="service-card" *ngFor="let service of services">
-              <div class="icon">
-                <i [class]="service.icon"></i>
+        <div class=" service-section py-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+            @for (service of services; track $index) {
+              <div class="">
+                <div class="service-card">
+                  <div class="icon">
+                    <i [class]="service.icon"></i>
+                  </div>
+                  <p class="service-title">{{ service.title }}</p>
+                </div>
               </div>
-              <p class="service-title">{{ service.title }}</p>
-            </div>
+            }
+            
           </div>
-          
+        </div>
+        
+        
       </div>
     </div>
   </div>
+</div>

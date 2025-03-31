@@ -23,7 +23,7 @@ export class ServiceCardsComponent {
     {
       icon: 'fa-solid fa-moon',
       title: 'Lunar Festivals 2025',
-      description: 'Festivals are myriad celebrations, each a unique form of joy. Explore the diverse world of festivities – a realm of celebration guided by cosmic energies.'
+      description: 'Festivals are myriad celebrations, each a unique form of joy. Explore the diverse world of festivities – a realm of celebration guided by.'
     },
     {
       icon: 'fa-solid fa-star',
@@ -36,4 +36,5 @@ export class ServiceCardsComponent {
       description: 'Are you a playful cat, a clever mouse, or a roaring lion? Discover your inner spirit animal with Todays astrology. Find out now!'
     }
   ];
+  
 }
